@@ -1,4 +1,20 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+    images:{
+        remotePatterns:[
+            {
+                protocol:'https',
+                hostname:'images.microcms-assets.io',
+                port:'',
+            },
+            {
+                protocol:'https',
+                hostname:'avatars.githubusercontent.com',
+                port:''
+            }
+        ],
+    },
+};
 
 export default nextConfig;
+
