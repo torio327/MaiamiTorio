@@ -15,8 +15,8 @@ const MicroCMSCard = ({id,thumbnail,title,publishedAt,updatedAt,content}:Props) 
     return (
         <>
          <div className={"rounded-xl bg-white flex flex-col items-center justify-center gap-y-3 p-4"}>
-             <div className={" w-full  h-auto rounded-lg"}><Image src={thumbnail} alt={title} width={900} height={100} className={"rounded-xl"}/></div>
-             <h1 className={"text-2xl text-center h-14"}>{title}</h1>
+             <div className={" w-[300px] h-[200px]  rounded-lg"}><Image src={thumbnail} alt={title} width={300} height={200} className={"rounded-xl"}/></div>
+             <h1 className={"text-xl mt-4 text-center h-20"}>{title}</h1>
              <div className={"h-14"}>
                  <p className={""}><span　className={"mr-2"}>公開日</span>{formatFullDate(publishedAt)}</p>
                  <div> {updatedAt && (<p><span className={"mr-2"}>更新日</span>{formatFullDate(updatedAt)}</p>)}</div>

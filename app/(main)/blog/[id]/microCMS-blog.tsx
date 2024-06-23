@@ -24,7 +24,7 @@ const MicroCmsBlog = ({microCMSArticle}:Props) => {
     return (
         <>
             <div className="mt-14">
-                <h1 className={'text-5xl text-center'}>{microCMSArticle.title}</h1>
+                <h1 className={'mx-10 text-5xl text-center'}>{microCMSArticle.title}</h1>
                 <Image src={microCMSArticle.thumbnail.url} alt={'thumbnail'} width={600} height={400} className={'mx-auto mt-24'}/>
                 <div className="flex justify-center mx-5">
                     <div dangerouslySetInnerHTML={{__html: microCMSArticle.content}}
