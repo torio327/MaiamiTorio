@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from "next/image";
+import "./about-me.css"
 
 const AboutMe = () => {
     return (
@@ -12,7 +13,7 @@ const AboutMe = () => {
                                 <h1 className="uppercase text-4xl md:text-6xl leading-tight font-medium mb-2">
                                     ABOUT ME
                                 </h1>
-                                <p className="text-lg leading-normal opacity-75 my-6">
+                                <p id={"description"} className="text-lg leading-normal opacity-75 my-6">
                                     プログラミングと普通ではない挑戦が好きな少し変わった大学生です。 子供のころから、
                                     折り紙や紙工作など何かを作ることが好きでした。
                                     高校の頃, 友達に「プログラミングをやってみないか」と言われたことがきっかけで始めました。
@@ -24,13 +25,8 @@ const AboutMe = () => {
                             </div>
                         </div>
                         <div className="col-span-12 lg:col-span-6">
-                            <div className="flex justify-center lg:justify-start lg:ml-12 ">
+                            <div id={"myPicture"} className="flex justify-center lg:justify-start lg:ml-12 ">
                                 <Image src={"/aboutMe.jpeg"} alt={"me"} width={300} height={400} className={"rounded-xl"} />
-                                {/*<img*/}
-                                {/*    src="/about_me.jpeg"*/}
-                                {/*    alt=""*/}
-                                {/*    className="max-w-full h-auto"*/}
-                                {/*/>*/}
                             </div>
                         </div>
                     </div>

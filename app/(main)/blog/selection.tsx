@@ -1,5 +1,4 @@
-
-import React, {useEffect, useRef} from 'react';
+import React, {Suspense} from 'react';
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import ZenCard from "@/app/(main)/blog/zen-card";
 import MicroCMSCard from "@/app/(main)/blog/microCMS-card";
@@ -54,12 +53,17 @@ const Selection = ({zenArticles,microCMSArticles}:Props) => {
                 <TabsContent value={"tech"}>
                     <div id={"zenBlog"} className={"grid md:grid-cols-2 lg:grid-cols-3 gap-4"}>
                         {zenArticles.map((article) => (
-                            <motion.div  key={article.id}  whileHover={{scale:1.1,transition:{delay:0.3}}}  className={"p-2"}  id={"zenCard"}>
-                                <ZenCard id={article.id} path={article.path}
-                                         liked_count={article.liked_count} article_type={article.article_type}
-                                         emoji={article.emoji} title={article.title} published_at={article.published_at}
-                                         body_updated_at={article.body_updated_at}/>
-                            </motion.div>
+                            <Suspense key={article.id} fallback={<div>Loading</div>}>
+                                <motion.div key={article.id} whileHover={{scale: 1.1, transition: {delay: 0.3}}}
+                                            className={"p-2"} id={"zenCard"}>
+                                    <ZenCard id={article.id} path={article.path}
+                                             liked_count={article.liked_count} article_type={article.article_type}
+                                             emoji={article.emoji} title={article.title}
+                                             published_at={article.published_at}
+                                             body_updated_at={article.body_updated_at}/>
+                                </motion.div>
+                            </Suspense>
+
                         ))}
                     </div>
 
@@ -67,11 +71,15 @@ const Selection = ({zenArticles,microCMSArticles}:Props) => {
                 <TabsContent value={"private"}>
                     <div className={" grid md:grid-cols-2 lg:grid-cols-3 gap-4"}>
                         {microCMSArticles.map((article) => (
-                            <motion.div key={article.id}  whileHover={{scale:1.1,transition:{delay:0.3}}}  className={"p-2"}>
-                                <MicroCMSCard id={article.id} thumbnail={article.thumbnail.url}
-                                              title={article.title} publishedAt={article.publishedAt}
-                                              updatedAt={article.updatedAt} content={article.content}/>
-                            </motion.div>
+                            <Suspense key={article.id} fallback={<div>Loading...</div>}>
+                                <motion.div key={article.id} whileHover={{scale: 1.1, transition: {delay: 0.3}}}
+                                            className={"p-2"}>
+                                    <MicroCMSCard id={article.id} thumbnail={article.thumbnail.url}
+                                                  title={article.title} publishedAt={article.publishedAt}
+                                                  updatedAt={article.updatedAt} content={article.content}/>
+                                </motion.div>
+                            </Suspense>
+
                         ))}
                     </div>
                 </TabsContent>
