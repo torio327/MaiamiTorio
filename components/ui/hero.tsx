@@ -74,7 +74,6 @@ const Hero = ({gsapHero}:Props) => {
                             <p id={'explanation'} className=" text-xl leading-normal opacity-75 mt-6">
                                 ブログと作品がまとめてあります
                             </p>
-
                         </div>
                     </div>
                 </div>

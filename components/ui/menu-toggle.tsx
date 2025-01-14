@@ -12,11 +12,11 @@ const MenuToggle = ({isOpen,toggle}:Props) => {
         <>
             <button onClick={toggle} className={"bg-accent rounded-full flex flex-col gap-y-2 "}>
                        <span
-                           className={`bg-blue-500 text-black block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isOpen ? 'rotate-90 translate-x-1 translate-y-1' : '-translate-y-0.5'}`}></span>
+                           className={`bg-blue-500 text-black block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isOpen ? 'rotate-45  translate-y-2' : '-translate-y-0.5'}`}></span>
                 <span
-                    className={`bg-blue-500 text-black block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isOpen ? 'rotate-90 translate-x-1 translate-y-1' : '-translate-y-0.5'}`}></span>
+                    className={` ${isOpen ? '' : 'bg-blue-500 text-black block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm -translate-y-0.5'}`}></span>
                 <span
-                    className={`bg-blue-500 text-black block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isOpen ? 'rotate-90 translate-x-1 translate-y-1' : '-translate-y-0.5'}`}></span>
+                    className={`bg-blue-500 text-black block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isOpen ? '-rotate-45  -translate-y-2.5' : '-translate-y-0.5'}`}></span>
             </button>
         </>
     );
