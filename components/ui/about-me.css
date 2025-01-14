@@ -1,0 +1,16 @@
+#description{
+ animation:animateDescription 2s forwards;
+}
+
+#myPicture{
+
+}
+
+@keyframes animateDescription {
+    from{
+        transform:translateX(-600px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}

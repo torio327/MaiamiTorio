@@ -30,7 +30,7 @@ interface microCMSArticles{
     image:[]
 }
 const Page =async () => {
-    const zenBlogData=await fetch(`https://zenn.dev/api/articles?username=maiamitorio&order=latest`,{cache:'no-store'});
+    const zenBlogData=await fetch(`https://zenn.dev/api/articles?username=maiamitorio&order=latest`,{cache:'force-cache'});
     const microCMSData=await client.get({
         endpoint:'blogthree',
     });
