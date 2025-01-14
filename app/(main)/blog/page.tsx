@@ -40,9 +40,6 @@ const Page =async () => {
 
     const microCMSArticles:microCMSArticles[]=microCMSData.contents;
 
-    console.log("hello")
-    console.log(zenArticles)
-
     return (
         <div className={"bg-slate-200"}>
             <BlogList zenArticles={zenArticles} microCMSArticles={microCMSArticles}/>
