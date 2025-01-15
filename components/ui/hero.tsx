@@ -1,10 +1,7 @@
 import React from 'react';
 import "./hero.css"
 
-type Props={
-    gsapHero:()=>void
-}
-const Hero = ({gsapHero}:Props) => {
+const Hero = () => {
     return (
         <>
             <section

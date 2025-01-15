@@ -1,7 +1,6 @@
-import React from 'react';
+import React, {Suspense} from 'react';
 import BlogList from "@/app/(main)/blog/blog-list";
 import {client} from "@/libs/client";
-
 
 interface zenArticles{
     id:number,
@@ -30,7 +29,7 @@ interface microCMSArticles{
     image:[]
 }
 const Page =async () => {
-    const zenBlogData=await fetch(`https://zenn.dev/api/articles?username=maiamitorio&order=latest`,{cache:'force-cache'});
+    const zenBlogData=await fetch(`https://zenn.dev/api/articles?username=maiamitorio&order=latest`,{cache:"no-store"});
     const microCMSData=await client.get({
         endpoint:'blogthree',
     });
@@ -42,7 +41,9 @@ const Page =async () => {
 
     return (
         <div className={"bg-slate-200"}>
+            <Suspense fallback={<p>Loading ...</p>}>
             <BlogList zenArticles={zenArticles} microCMSArticles={microCMSArticles}/>
+            </Suspense>
         </div>
     );
 };
