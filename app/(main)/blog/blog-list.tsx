@@ -1,4 +1,4 @@
-'use client';
+'use client'
 import React from 'react';
 import Selection from "@/app/(main)/blog/selection";
 import About from "@/components/ui/about";
