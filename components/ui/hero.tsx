@@ -14,7 +14,7 @@ const Hero = () => {
                 <div className="container px-4">
                     <div className="grid grid-cols-12">
                         <div className="col-span-12 md:col-span-8 md:col-start-3 text-center">
-                            <h1 id={"title"} className="welcome">
+                            <h1 role={"heading"} id={"title"} className="welcome">
                                 Welcome to MaiamiTorio
                             </h1>
                             <p id={'explanation'} className=" text-xl leading-normal opacity-75 mt-6">

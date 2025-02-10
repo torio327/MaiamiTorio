@@ -10,7 +10,7 @@ const AboutMe = () => {
                     <div className="grid grid-cols-12 gap-5 justify-center items-center">
                         <div className="col-span-12 lg:col-span-6">
                             <div className="lg:px-7">
-                                <h1 className="uppercase text-4xl md:text-6xl leading-tight font-medium mb-2">
+                                <h1 role={'heading'} className="uppercase text-4xl md:text-6xl leading-tight font-medium mb-2">
                                     ABOUT ME
                                 </h1>
                                 <p id={"description"} className="text-lg leading-normal opacity-75 my-6">

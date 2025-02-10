@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "types": ["@testing-library/jest-dom", "jest", "node"],
     "lib": [
       "dom",
       "dom.iterable",
@@ -21,10 +22,12 @@
         "name": "next"
       }
     ],
+    "baseUrl": "./",
     "paths": {
       "@/*": [
         "./*"
-      ]
+      ],
+      "@/components/*": ["components/*"]
     },
     "target": "ES2017"
   },
